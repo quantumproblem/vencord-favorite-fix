@@ -8,8 +8,8 @@ import definePlugin from "@utils/types";
 
 export default definePlugin({
     name: "FavoriteServerFix",
-    description: "Fixes favorites server gating and always enables the Favorites toggle.",
-    authors: [{ name: "Big", id: 0n }],
+    description: "Enables toggling the Favorites server.",
+    authors: [],
     patches: [
         // Patch to enable toggling Favorites server
         {
