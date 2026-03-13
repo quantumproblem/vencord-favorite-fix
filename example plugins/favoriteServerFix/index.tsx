@@ -1,19 +1,17 @@
 /*
- * Vencord userplugin: Favorite Server Fix
- *
- * This plugin applies a patch to allow toggling the "Favorites" server in the Guild List.
- *
- * See the provided docs (mhtml) and existing example plugins for how to structure a Vencord userplugin.
+ * Vencord, a Discord client mod
+ * Copyright (c) 2026
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 import definePlugin from "@utils/types";
 
 export default definePlugin({
     name: "FavoriteServerFix",
-    description: "Allows toggling the Favorites server by bypassing the premium check.",
-    authors: [],
-
+    description: "Fixes favorites server gating and always enables the Favorites toggle.",
+    authors: [{ name: "Big", id: 0n }],
     patches: [
+        // Patch to enable toggling Favorites server
         {
             find: "={isPremium",
             replacement: {
