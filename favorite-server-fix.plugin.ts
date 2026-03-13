@@ -1,22 +1,19 @@
 /*
  * Vencord, a Discord client mod
- * Copyright (c) 2026 Vendicated and contributors
+ * Copyright (c) 2025 Vendicated and contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * This is a standalone userplugin that applies only the "favorite server"
+ * patch described in the provided docs (see "Creating Plugins _ Vencord Docs.mhtml").
  */
 
 import definePlugin from "@utils/types";
 
 export default definePlugin({
-    name: "FavoriteServerFix",
-    description: "Enables toggling the Favorites server without Nitro.",
-    authors: [
-        {
-            name: "Kevin",
-            id: 0n
-        }
-    ],
+    name: "Favorite Server Fix",
+    description: "Enables toggling favorite servers by bypassing the premium check.",
+    authors: [],
     patches: [
-        // Patch to enable toggling Favorites server
         {
             find: "={isPremium",
             replacement: {
